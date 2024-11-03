@@ -1,0 +1,282 @@
+@font-face {
+    font-family: 'Upheaval';
+    src: url(font/upheavtt.ttf);
+}
+body {
+    background-color:rgb(0, 0, 0);
+    margin: 0;
+    background-image: url(https://economygates.com/wp-content/uploads/2022/07/80c995f5-5542-47e2-b19a-1f068e6ea89c-1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100vh;
+    font-family: "Upheaval", sans-serif;
+}
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url(https://cdn.discordapp.com/attachments/1028928046411022417/1036259321606045736/313363921_518703053437084_2884995809003031042_n.jpg.png);
+    background-size: cover;
+    background-position: center;
+}
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #000000;
+    top: 0%;
+    width: 100%;
+    position: sticky;
+    z-index: +1;
+}
+li {
+    float: left;
+    margin-left: 10px;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+.container {
+    background-color: #151515;
+    height: 7vh;
+    padding: 5vh;
+}
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info .tab {
+    list-style-type: none;
+}
+.info .tab a[data-switcher] {
+    clip-path: polygon(5% 8%, 8% 8%, 8% 0, 92% 0, 92% 8%, 95% 8%, 95% 92%, 92% 92%, 92% 100%, 8% 100%, 8% 92%, 5% 92%);
+    color: white;
+    background-color: rgb(0, 213, 255);
+    text-align: center;
+    margin: 0;
+    margin-inline: 20px;
+    font-size: 2vw;
+    padding: 13px 5px;
+    text-decoration: none;
+    width: 12vw;
+    height: 4vh;
+    word-wrap: normal;
+    border: 2px;
+    cursor: pointer;
+    display: block;
+}
+.info .tab.is-active a[data-switcher] {
+    background-color: rgb(0, 128, 255);
+}
+.info .tab:hover a[data-switcher] {
+    background-color: rgb(0, 128, 255);
+}
+.content {
+    color: aquamarine;
+    background-color: #1e1e1e;
+    width: 70%;
+    height: 70vh;
+    margin-inline: 15%;
+    display: flex;
+}
+#section {
+    padding-left: 0;
+    padding-right: 0;
+}
+#section img {
+    margin-right: 0;
+}
+#section p {
+    font-size: 2.5vw;
+    padding: 7vw 4vh;
+    border-radius: 10px;
+    color: rgb(0, 204, 255);
+    margin-right: 20px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0px 3px 6px rgba(72, 72, 72, 0);
+}
+span.about {
+    font-size: 1.2vw;
+    color: rgb(221, 221, 221);
+
+}
+#section .page {
+    display: none;
+    color: rgb(238, 238, 238);
+}
+#section .page.is-active {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cicon img {
+    width: 30vw;
+    height: 68vh;
+}
+.halloweenimg img {
+    width: 27vw;
+    height: 65vh;
+    margin-top: 4%;
+}
+.news_section {
+    margin-left: 1vw;
+    margin: 3vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+}
+.news_container {
+    background-color: #0a0a0a;
+    height: 7vh;
+    padding: 5vh;
+    box-shadow: 0px 0px 7px 3px rgb(0, 0, 0);
+    font-size: larger;
+}
+.news_text {
+    font-size: 0.9vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+.bbutton {
+    color: white;
+    background-color: rgb(0, 213, 255);
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+    margin-right: 20px;
+    width: 12vw;
+    height: 10%;
+    font-family: "Upheaval", sans-serif;
+    font-size: 2vw;
+    border: inset 5px;
+    border-color: rgba(85, 85, 85, 0.63) ;
+    box-shadow: 0px 0px 13px 6px rgb(131, 218, 255);
+    cursor: pointer;
+}
+.bbutton:hover {
+    width: 12.5vw;
+    height: 11%;
+    background-color: rgb(31, 218, 255);
+    box-shadow: 0px 0px 15px 8px rgb(131, 218, 255);
+}
+.smaller {
+    border-color: rgba(114, 114, 114, 0.63);
+    box-shadow: none;
+    width: 10vw;
+    height: 8%;
+    font-size: 1.5vw;
+    padding: 12px 8px;
+}
+.smaller:hover {
+    width: 10vw;
+    height: 9%;
+    box-shadow: 0px 0px 10px 6px rgb(131, 218, 255);
+    background-color: rgb(47, 220, 255);
+}
+.card {
+        clip-path: polygon(0 5%, 7% 5%, 7% 0, 93% 0, 93% 5%, 100% 5%, 100% 95%, 93% 95%, 93% 100%, 7% 100%, 7% 95%, 0 95%);
+        width: 10vw;
+        height: 30vh;
+        background-color: #0a0a0a;
+        text-align: center;
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+        padding: 1vw;
+        margin: 0.5vw;
+        margin-block-start: 12vh;
+        margin-left: 1.1vw;
+        font-size: 1.1vw;
+        color: #ffffff;
+
+        border-radius: 10px;
+
+        display: inline-block;
+
+        vertical-align: middle;
+    }
+    .card img {
+        width: 9vw;
+    }
+    .card .detail {
+        height: 5vh;
+        overflow-y: scroll;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    .card:hover {
+        background-color: rgb(0, 132, 255);
+        font-size: 1.15vw;
+        margin-block-start: 8vh;
+    }
+    .name {
+        color: rgb(131, 220, 255);
+    }
+    .name:hover {
+        color: rgb(255, 70, 70);
+        cursor: pointer;
+    }
+    .hallowTheme {
+        background-image: url(https://wallpaperaccess.com/full/869010.jpg);
+        background-size: cover;
+        text-align: center;
+        padding: 1vw 1vh;
+        border-radius: 10px;
+        border: ridge 5px;
+        border-color: #b2b2b2;
+        margin-left: 10vw;
+        margin-right: 3vw;
+        background-color: rgb(208, 69, 0);
+        box-shadow: 0px 3px 6px rgba(72, 72, 72, 0);
+        font-size: 1.5vw;
+        width: 25vw;
+        height: 35vh;
+    }
+    .hallowp {
+        font-size: 2.5vw;
+        color: #ff98e9;
+        margin-top: 30px;
+    }
+    .flright {
+        float: right;
+    }
+    .flleft {
+        float: left;
+    }
+    .mgtop {
+        margin-top: 4vh;
+    }
+    .subbutton {
+        margin-top: 2vh;
+        color: white;
+        background-color: rgb(255, 119, 0);
+        text-align: center;
+        text-decoration: none;
+        width: 8vw;
+        height: 5vh;
+        font-family: "Upheaval", sans-serif;
+        font-size: 1vw;
+        border: inset 5px;
+        border-color: rgba(85, 85, 85, 0.63) ;
+        cursor: pointer;
+    }
+    .subbutton:hover {
+        background-color: rgb(255, 133, 27);
+    }
+
+    .imgg {
+        border: 4px solid black;
+        justify-items: center;
+        margin-left: 16%;
+    }
+    .popgame {
+        width: 1350px;
+        height: 667px;
+    }

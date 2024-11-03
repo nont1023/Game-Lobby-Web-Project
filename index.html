@@ -1,0 +1,159 @@
+<!--SourceCode in Chapter 1 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game Web By Nont</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <script>
+            fetch("https://gamertocoder.garena.co.th/api/minigames")
+			  .then((response) => {
+				if (response.status !== 200) {
+				  return response.status;
+				}
+				return response.json();
+			  })
+			  .then((data) => {
+				if (typeof data == "number") {
+				  alert(data);
+				} else {
+				  for (let i = 0; i < 5; i++) {
+					const currentData = data[i];
+					const newListItem = document.createElement("li");
+					newListItem.classList.add("card");
+					const genre_array = currentData.genre;
+					let genre_string = genre_array[0];
+					if (genre_array.length > 1) {
+					  for (let j = 1; j < genre_array.length; j++) {
+						genre_string = genre_string + ", " + genre_array[j];
+					  }
+					}
+					const html =
+                      '<a href="' + currentData.icon + '">'+currentData.name+'</a>'
+					  + '<img src="' + currentData.icon + '"/>'
+					  + '<div>Genre: ' + genre_string + '</div>';
+					html.trim();
+					newListItem.innerHTML = html;
+					document.querySelector('#section .page[data-page="3"]').appendChild(newListItem);
+				  }
+				}
+			  });
+
+            window.onload = () => {
+                const tab_switchers = document.querySelectorAll('[data-switcher]');
+
+                for (let i = 0; i < tab_switchers.length; i++) {
+                    const curtab_switchers = tab_switchers[i];
+                    const page_id = curtab_switchers.dataset.tab;
+
+                    curtab_switchers.addEventListener('click', () => {
+                        document.querySelector('.info .tab.is-active').classList.remove('is-active');
+                        curtab_switchers.parentNode.classList.add('is-active');
+
+                        SwitchPage(page_id)
+                    });
+                }
+            }
+
+            function SwitchPage (page_id) {
+                const cur_page = document.querySelector('#section .page.is-active');
+                cur_page.classList.remove('is-active');
+
+                const next_page = document.querySelector(`#section .page[data-page="${page_id}`)
+                next_page.classList.add('is-active');
+            }
+
+        function redirect() {
+            window.location.href = "https://www.blockmango.com/#/";
+        }
+
+        function validateForm() {
+            console.log("yes yes yes");
+            let hallow = document.forms["hallowForm"]["fphrase"].value;
+            alert("We've collected your phrase, " + '"' + hallow + '"')
+        }
+        </script>
+        <div class="banner">
+            <ul class="nav">
+                <li><img src="https://www.blockmango.com/static/images/header/signup_pic.png" height="43" width="279"/></li>
+                <button class="bbutton smaller" style="float: right;" onclick="redirect()">PLAY NOW</button>
+            </ul>
+        </div>
+
+        <div>
+            <img class="imgg" src="https://www.ungeek.ph/wp-content/uploads/2022/07/Blockman_GO-6.jpg">
+            <div class="center">
+                <button class="bbutton" onclick="redirect()">PLAY NOW</button>
+            </div>
+        </div>
+        <div class="container">
+           <div class="info">
+                <li class="tab is-active">
+                    <a data-switcher data-tab="1">ABOUT</a>
+                </li>
+                <li class="tab">
+                    <a data-switcher data-tab="2">NEWS</a>
+                </li>
+                <li class="tab">
+                    <a data-switcher data-tab="3">HOT GAMES</a>
+                </li>
+                <li class="tab">
+                    <a data-switcher data-tab="4">EVENT</a>
+                </li>
+           </div>
+        </div>
+        <div class="content">
+            <section id="section">
+                <div class="page is-active" data-page="1">
+                    <div class="cicon">
+                        <img src="https://cdn.now.gg/apps-content/com.sandboxol.blockymods/game-tiles/blockman-go.jpg"/> 
+                    </div>
+                    <p>Welcome to Blockman GO !<br><span class="about">Blockman GO is a free app including minigames, chatting and making friends. You can play various block style minigames here.</span> </p>
+                </div>
+                <div class="page" data-page="2">
+                    <div class="cicon">
+                        <img src="https://cdn.now.gg/apps-content/com.sandboxol.blockymods/game-tiles/blockman-go.jpg"/> 
+                    </div>
+                    <div class="news_section">
+                        <img src="https://i.ytimg.com/vi/UBrQy1QvTUE/maxresdefault.jpg" width="250" height="130"/>
+                        <div class="news_container">HALLOWEEN EVENT<br><span class="news_text">Visit the EVENT section to learn more.</span></div>
+                        <img src="https://pbs.twimg.com/media/FBqNoOAVEAYYSoR.jpg" width="250" height="130"/>
+                        <div class="news_container">NEW EVENT, NEW ARMOR<br><span class="news_text">Double Raffle Armor skin : Warfare</span></div>
+                        <img src="https://i.ytimg.com/vi/Ae9yySm2hII/maxresdefault.jpg" width="250" height="130"/>
+                        <div class="news_container">FASHION CONTEST<br><span class="news_text">Coming soon, Fall 2022.</span></div>
+                    </div>
+                </div>
+                <div class="page" data-page="3">
+                    <img class="popgame" src="https://dl.memuplay.com/new_market/img/com.app.blockmango.sc1.2022-01-29-21-49-01.jpg">
+                    <div class="gridtype">
+                    </div>
+                </div>
+                <div class="page" data-page="4">
+                    <div class="halloweenimg">
+                        <img src="https://pbs.twimg.com/media/FC3MeRGUUAANNZT.jpg"/>
+                    </div>
+                    <form class="hallowTheme" name="hallowForm" onsubmit="return validateForm()" method="post">
+                        <div>
+                            <div class="hallowp">SPOOKTOBER</div>
+                            <div>Enter your spooky phrase and get a chance to win exclusive cosmetics</div>
+                        </div>
+                        <div class="mgtop">
+                            <label class="flleft" type="text">Username : </label>
+                            <input class="flright" id="numb" type="text" name="fname" required>
+                        </div>
+                        <div>
+                            <label class="flleft" type="text">Spooky Phrases : </label>
+                            <input class="flright" type="text" name="fphrase" required>
+                        </div>
+                        <div>
+                            <input  class="flright subbutton" type="submit" value="Submit">
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="https://www.blockmango.com/static/images/header/signup_pic.png" height="43" width="279"/>
+    </body>
+</html>
