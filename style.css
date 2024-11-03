@@ -280,3 +280,96 @@ span.about {
         width: 1350px;
         height: 667px;
     }
+
+@media (max-width: 600px) {
+    body {
+        background-size: cover;
+    }
+    .banner {
+        height: 50vh;
+        background-position: top;
+    }
+    .nav li {
+        float: none;
+        text-align: center;
+        margin: 0;
+    }
+    .center {
+        font-size: 4vw;
+    }
+    .info .tab a[data-switcher] {
+        font-size: 4vw;
+        padding: 10px 2px;
+        width: auto;
+        height: auto;
+    }
+    .content {
+        width: 90%;
+        height: auto;
+        margin-inline: 5%;
+    }
+    .cicon img, .halloweenimg img {
+        width: 80%;
+        height: auto;
+        margin-top: 10%;
+    }
+    .news_section {
+        grid-template-columns: 1fr;
+    }
+    .news_text {
+        font-size: 3vw;
+    }
+    .bbutton, .smaller {
+        width: auto;
+        font-size: 3vw;
+        padding: 10px;
+    }
+    .card {
+        width: 90%;
+        margin-block-start: 5vh;
+        font-size: 4vw;
+    }
+    .hallowTheme {
+        width: 90%;
+        height: auto;
+        font-size: 3vw;
+    }
+    .hallowp {
+        font-size: 4vw;
+    }
+    .subbutton {
+        width: auto;
+        font-size: 3vw;
+        padding: 5px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .banner {
+        height: 60vh;
+    }
+    .center {
+        font-size: 3vw;
+    }
+    .info .tab a[data-switcher] {
+        font-size: 2.5vw;
+    }
+    .content {
+        width: 85%;
+        margin-inline: 7.5%;
+    }
+    .news_section {
+        grid-template-columns: 1fr 1fr;
+    }
+    .bbutton, .smaller {
+        font-size: 2.5vw;
+    }
+    .card {
+        width: 45%;
+        font-size: 2vw;
+    }
+    .hallowTheme {
+        width: 45%;
+        font-size: 2vw;
+    }
+}
