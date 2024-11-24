@@ -8,7 +8,7 @@ body {
     background-image: url(https://economygates.com/wp-content/uploads/2022/07/80c995f5-5542-47e2-b19a-1f068e6ea89c-1.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100vh;
+    background-size: cover;
     font-family: "Upheaval", sans-serif;
     font-size: 1rem;
 }
@@ -354,7 +354,7 @@ ul {
         margin: 5vw auto;
     }
 
-    .banner {
+    .banner, .new-container {
         height: 50vh;
     }
 
